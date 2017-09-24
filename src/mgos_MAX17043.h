@@ -1,7 +1,14 @@
 #include "fw/src/mgos.h"
 bool mgos_MAX17043_init(void);   // Required - initialisation function
 
+#ifndef CS_MOS_LIBS_ARDUINOLIB_MAX17043_SRC_MGOS_ARDUINO_BME280_H_
+#define CS_MOS_LIBS_ARDUINOLIB_MAX17043_SRC_MGOS_ARDUINO_BME280_H_
+
 #include "MAX17043.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 #include "Arduino.h"
 
