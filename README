@@ -1,5 +1,6 @@
 MAX17043/44 library for Arduino
 
+My attempt to port this to Mongoose OS for the ESP32
 
 The MAX17043/MAX17044 are ultra-compact, low-cost, host-side fuel-gauge systems 
 for lithium-ion (Li+) batteries in handheld and portable equipment. 
