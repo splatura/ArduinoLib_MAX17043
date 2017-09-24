@@ -1,6 +1,8 @@
 #include "fw/src/mgos.h"
 bool mgos_MAX17043_init(void);   // Required - initialisation function
 
+#include "MAX17043.h"
+
 #include "Arduino.h"
 
 #ifndef _MAX17043_H
@@ -16,27 +18,6 @@ bool mgos_MAX17043_init(void);   // Required - initialisation function
 #define COMMAND_REGISTER	0xFE
 
 
-class MAX17043 {
-
-	public:
-	
-		float getVCell();
-		float getSoC();
-		int getVersion();
-		byte getCompensateValue();
-		byte getAlertThreshold();
-		void setAlertThreshold(byte threshold);
-		boolean inAlert();
-		void clearAlert();
-		
-		void reset();
-		void quickStart();
-	
-	private:
-
-		void readConfigRegister(byte &MSB, byte &LSB);
-		void readRegister(byte startAddress, byte &MSB, byte &LSB);
-		void writeRegister(byte address, byte MSB, byte LSB);
-};
+MAX17043 *mgos_MAX17043_create();
 
 #endif
